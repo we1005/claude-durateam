@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Claude-Durateam</title>
+  <desc id="desc">Codex plans. GLM workers build. An MCP workflow for autonomous coding, testing, and session continuity.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1600" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101A2B"/>
+      <stop offset="1" stop-color="#07111D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="885" y1="45" x2="1475" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7C8"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1270 210) rotate(90) scale(330 470)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#147D82" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#147D82" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" stroke="#B8D4E9" stroke-opacity=".045"/>
+    </pattern>
+    <clipPath id="clip"><rect width="1600" height="460" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1600" height="460" fill="url(#background)"/>
+    <rect width="1600" height="460" fill="url(#glow)"/>
+    <rect width="1600" height="460" fill="url(#grid)"/>
+    <rect x="1" y="1" width="1598" height="458" rx="23" stroke="#26394D"/>
+    <rect x="66" y="55" width="34" height="34" rx="10" fill="#6EE7C8"/>
+    <path d="m76 66 7 6-7 6m12 0h5" stroke="#0C1C29" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="116" y="78" fill="#DAE5F0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3">CLAUDE-DURATEAM</text>
+    <text x="66" y="195" fill="#F1F6FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="72" font-weight="750" letter-spacing="-2">Codex plans.</text>
+    <text x="66" y="279" fill="#6EE7C8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="72" font-weight="750" letter-spacing="-2">GLM workers build.</text>
+    <text x="69" y="332" fill="#A6B8CA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="23">Autonomous coding. Shared contracts. Useful context.</text>
+    <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="1.2">
+      <rect x="68" y="372" width="90" height="34" rx="17" fill="#132B35" stroke="#31515B"/>
+      <text x="113" y="394" text-anchor="middle" fill="#8DDCCB">MCP</text>
+      <rect x="170" y="372" width="211" height="34" rx="17" fill="#172735" stroke="#344658"/>
+      <text x="275" y="394" text-anchor="middle" fill="#BBD0E1">CLAUDE AGENT SDK</text>
+      <rect x="393" y="372" width="181" height="34" rx="17" fill="#172735" stroke="#344658"/>
+      <text x="484" y="394" text-anchor="middle" fill="#BBD0E1">VOLCENGINE GLM</text>
+    </g>
+    <g transform="translate(1074 75)">
+      <rect x="68" y="20" width="274" height="274" rx="60" transform="rotate(12 205 157)" fill="#102D39" fill-opacity=".75" stroke="#2F6471"/>
+      <rect x="15" y="65" width="274" height="274" rx="60" transform="rotate(-9 152 202)" fill="#0D2331" stroke="#3F8290"/>
+      <rect x="45" y="47" width="274" height="274" rx="60" fill="#122B39" stroke="url(#accent)" stroke-width="2"/>
+      <path d="m117 130 59 53-59 53m80 0h53" stroke="url(#accent)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="298" cy="66" r="25" fill="#6EE7C8"/>
+      <path d="m287 66 8 8 14-16" stroke="#113442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="21" cy="255" r="8" fill="#38BDF8"/>
+      <circle cx="338" cy="237" r="5" fill="#6EE7C8" fill-opacity=".7"/>
+    </g>
+    <text x="1525" y="411" text-anchor="end" fill="#607F96" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="2">PLAN / BUILD / VERIFY / CONTINUE</text>
+  </g>
+</svg>
