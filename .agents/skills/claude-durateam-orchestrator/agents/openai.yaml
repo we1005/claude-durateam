@@ -1,0 +1,6 @@
+interface:
+  display_name: "Claude-Durateam Orchestrator"
+  short_description: "Dispatch and verify local GLM workers through Claude-Durateam"
+  default_prompt: "Use $claude-durateam-orchestrator to delegate this coding task to Claude-Durateam with GLM 5.3 Flash/high, then verify the result."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "project": "claude-durateam",
+  "version": "0.1.0",
+  "completedAt": "2026-11-16T06:16:15.068072+00:00",
+  "verificationCodeCommit": "377c73a7e2d566a66ed88e31b8a628e14877edeb",
+  "platform": {
+    "os": "macOS Apple Silicon",
+    "node": "26.13.0",
+    "npm": "11.20.0",
+    "systemClaudeCLI": "2.1.322 (version check)",
+    "sdk": "0.3.325",
+    "sdkBundledClaudeRuntime": "2.1.325",
+    "mcpServer": "2.4.0"
+  },
+  "provider": {
+    "name": "Volcengine Coding Plan",
+    "baseUrl": "https://ark.cn-beijing.volces.com/api/coding",
+    "models": [
+      "glm-5.3",
+      "glm-5.3-flash"
+    ],
+    "credential": "runtime file handle, value never committed"
+  },
+  "capabilities": {
+    "mcpTools": [
+      "init",
+      "models",
+      "spawn",
+      "spawn_batch",
+      "wait",
+      "status",
+      "sessions",
+      "follow_up",
+      "abort",
+      "steer",
+      "fork",
+      "answer",
+      "gate"
+    ],
+    "defaultConcurrency": 2,
+    "configurableConcurrency": [
+      1,
+      2,
+      3
+    ],
+    "skillSelection": "operator catalog; invocation whitelist, builtin metadata may still be listed",
+    "mcpSelection": "operator catalog exact selected tools",
+    "durability": "SQLite transaction+ownership; unknown_outcome, no blind replay",
+    "edits": "autonomous within explicit allowedPaths",
+    "bash": "real sandbox, approvals and credential-injecting loopback proxy"
+  },
+  "validation": {
+    "offline": {
+      "files": 21,
+      "testsPassed": 156,
+      "rootExit": 0,
+      "cleanInstallExit": 0,
+      "cleanCheckoutTestsPassed": 156,
+      "typecheckExit": 0,
+      "buildExit": 0,
+      "logs": [
+        {
+          "result": ".artifacts/root-checks/20261116T053536-1ee0df672fe0.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T053536-1ee0df672fe0.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T054141-2436e8d9a37a.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T054141-2436e8d9a37a.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T060137-7156898bc3ba.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T060137-7156898bc3ba.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T060223-19e30a21f435.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+          "command": [
+            "npm",
+            "ci",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "log": ".artifacts/root-checks/20261116T060223-19e30a21f435.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T060338-37184f204698.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T060338-37184f204698.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T061003-eac62bc65732.json",
+          "exitCode": 1,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T061003-eac62bc65732.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T061112-37517954cdfb.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T061112-37517954cdfb.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T061219-017b4409e139.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "log": ".artifacts/root-checks/20261116T061219-017b4409e139.log"
+        },
+        {
+          "result": ".artifacts/root-checks/20261116T061220-87149d4f08ef.json",
+          "exitCode": 0,
+          "cwd": "/absolute/path/claude-durateam",
+          "command": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "log": ".artifacts/root-checks/20261116T061220-87149d4f08ef.log"
+        }
+      ]
+    },
+    "liveProduction": {
+      "commit": "1d47adf61aa003fa6ca6d25446b34b89cd28f259",
+      "distMainSHA256": "1bf328836b673eb5632532a1813acff15f99cf1d491474bc0f5e2d12d35de38b",
+      "runtimeFilesUnchangedSinceLive": true,
+      "runtimeFilesCompared": 44,
+      "laterChangesOnly": [
+        ".agents/skills/pi-durateam-orchestrator/SKILL.md",
+        "EXECUTION_PLAN.md",
+        "README.md",
+        "src/scripts/acceptance-live-mcp.ts"
+      ],
+      "summary": ".artifacts/qa-live/20261116060241-live-1d47adf-b112/summary.json",
+      "exitCode": 0,
+      "sdkExecutionSegments": 5,
+      "actualModel": "glm-5.3",
+      "peakActualWorkers": 2,
+      "separateWriteWorktrees": true,
+      "scopedEditsWithoutApproval": true,
+      "queuedCancelZeroModel": true,
+      "followUpSameSessionZeroToolMemory": true,
+      "runningAbortAfterInit": true,
+      "forkNewJobWorktreeSessionZeroToolMemory": true,
+      "resourcesSample": {
+        "descendantCount": 2,
+        "descendantRssKb": 525104,
+        "bridgeRssKb": 130048,
+        "samples": 26
+      }
+    },
+    "componentLive": {
+      "glm53Read": true,
+      "glm53FlashRead": true,
+      "steerQueuedSdkAckFinal": true,
+      "skillAndMcpEcho": true,
+      "scopeEscapeDenied": true,
+      "sandboxAndCredentialIsolation": true,
+      "chineseCwdCrossJobFork": true
+    },
+    "gateEvidenceRepair": {
+      "firstLiveUnderlyingCommandLogsWereDeleted": true,
+      "firstLiveSummaryRetained": true,
+      "historicalLogsNotReconstructed": true,
+      "subsequentZeroModelRecheck": ".artifacts/qa-live/20261116061114-dry-run-1d47adf-3a91/summary.json",
+      "exitCodes": [
+        0,
+        9,
+        0
+      ],
+      "logsExistAfterCleanup": true,
+      "temporaryDirectoryRemoved": true,
+      "rpcMetadata": ".artifacts/qa-live/20261116061114-dry-run-1d47adf-3a91/rpc-metadata.jsonl"
+    },
+    "workerEvidenceArchive": {
+      "path": ".artifacts/worker-evidence",
+      "fileCounts": {
+        "scheduler": 19,
+        "workspace": 4,
+        "qa": 67
+      },
+      "actualCredentialLeaks": [],
+      "originalArtifactsPreserved": true
+    }
+  },
+  "audit": {
+    "protectedConfigurationFilesUnchanged": true,
+    "rawCredentialLeakPaths": [],
+    "credentialScanFiles": 1432,
+    "knownOwnedPidsAlive": [],
+    "skillValidation": "passed",
+    "discovery": "test/**/*.test.ts; validation clone excluded",
+    "rootScope": "contracts, mechanical integration, targeted diagnosis and final deterministic test infrastructure; no business implementation takeover"
+  },
+  "workflow": {
+    "piSessions": 4,
+    "executionSegments": 20,
+    "peakPiConcurrent": 4,
+    "allModels": "DeepSeek V4.1 Flash/max",
+    "modelUsageEvidence": ".artifacts/delegation-final.json",
+    "rootGptUsage": "not measured",
+    "costSavings": "not evaluated"
+  },
+  "quotaEvent": {
+    "code": "AccountQuotaExceeded",
+    "observedAt": "2026-11-16T14:08:00+08:00",
+    "reportedResetAt": "2026-11-16T16:45:04+08:00",
+    "scope": "account 5-hour window; other usage not isolated",
+    "noFurtherModelRequests": true,
+    "localTestInfrastructureCompletedByRoot": true
+  },
+  "limits": [
+    "SDK transcript file layout is pinned-version internal coupling; revalidate upgrades",
+    "Tested on current macOS/Node only, no broad platform or sustained-load certification",
+    "First live underlying gate logs missing, clearly distinguished from new complete recheck",
+    "Loopback dummy permits invoking its proxy during run; not a multi-tenant security guarantee",
+    "Gate commands and external MCP need operator authorization; Git worktrees are not OS sandboxes",
+    "SDK run counters are not exact HTTP request counts; SDK estimates are not provider billing"
+  ],
+  "requiredWorkRemaining": [],
+  "clientConfiguration": "example supplied; existing user Codex/Claude/Pi configs unchanged, no publication or global MCP registration"
+}

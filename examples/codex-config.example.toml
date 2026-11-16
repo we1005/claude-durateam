@@ -1,0 +1,18 @@
+# 示例：注册 claude-durateam 为本地 stdio MCP 服务。
+# 不要覆盖既有 [mcp_servers.pi] 等条目；路径按本机替换。
+[mcp_servers.claude_durateam]
+command = "/opt/homebrew/bin/node"
+args = ["/ABSOLUTE/PATH/claude-durateam/scripts/codex-mcp-launcher.mjs"]
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+
+# 只放路径，不放密钥值。凭据由服务在运行时从该文件读取。
+[mcp_servers.claude_durateam.env]
+CLAUDE_DURATEAM_KEY_FILE = "/Users/YOU/private/api-key.txt"
+CLAUDE_DURATEAM_MAX_CONCURRENT = "5"
+CLAUDE_DURATEAM_MAX_QUEUED = "32"
+CLAUDE_DURATEAM_ALLOWED_ROOTS = "/Users/YOU/dev/your-repo"
+CLAUDE_DURATEAM_RUNTIME = "/Users/YOU/.local/share/claude-durateam"
+# Each Codex connection gets a separate instances/<id> durable namespace.
+# To recover a known idle instance, explicitly select its id (active owners are rejected):
+# CLAUDE_DURATEAM_INSTANCE = "previous-instance-id"

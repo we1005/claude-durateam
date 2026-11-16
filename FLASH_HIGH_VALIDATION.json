@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "version": "0.3.0",
+  "completedAt": "2026-11-16T07:21:17.912476+00:00",
+  "runtimeCommit": "86d6b01a7c0811bb562322257d2f6e690d3616dd",
+  "runtimeCommitFull": "86d6b01a7c0811bb562322257d2f6e690d3616dd",
+  "userRequest": "Direct Claude-Durateam + Volcengine GLM5.3Flash/high; no DeepSeek or Pi delegation",
+  "implementation": {
+    "reasoningEffort": "MCP→prepared task→durable state→RunnerRequest→SDK, default high; resume/fork preserved",
+    "contextReads": "normal project reads independent from write allowedPaths; protected/outside paths denied",
+    "sessionRaces": "cannot resume/fork terminal-but-unsettled original runner; original slot retained until settle",
+    "proxy": "exact POST/messages routes, normalized paths, tracked sockets, SSE streaming, bounded safe observation with explicit statuses",
+    "budgets": "explicit1..100turns/6h max; retained follow_up may renew budgets only, cannot change permissions/model/cwd",
+    "defaults": "user state outside installed package, sibling worktrees, private dedicated credential file, one version source"
+  },
+  "validation": {
+    "offline": {
+      "passed": 188,
+      "files": 26,
+      "verify": "passed typecheck/build/full tests/MCP handshake",
+      "cleanCheckoutPassed": 188
+    },
+    "liveProduction": {
+      "summary": ".artifacts/qa-live/20261116071343-live-86d6b01-d32c/summary.json",
+      "exitCode": 0,
+      "sdkExecutionSegments": 5,
+      "model": "glm-5.3-flash",
+      "effort": "high",
+      "peakConcurrentWorkers": 2,
+      "observedRequests": 9,
+      "allObservedMessageEffortHigh": true,
+      "allMetadataParsed": true,
+      "independentWriteWorktrees": true,
+      "followUpSameSessionZeroToolMemory": true,
+      "forkNewSessionWorktreeZeroToolMemory": true,
+      "queuedCancelZeroModel": true,
+      "runningCancelAfterInit": true,
+      "gateExitCodes": [
+        0,
+        9,
+        0
+      ],
+      "gateCommandLogsRetained": true,
+      "ownedPidsAlive": []
+    },
+    "workerCampaign": {
+      "directMcpClient": true,
+      "piOrDeepSeekCalls": 0,
+      "retainedConversations": 4,
+      "sdkSegments": 12,
+      "peakSingleServerConcurrency": 3,
+      "jobs": [
+        {
+          "jobId": "CDT-00001",
+          "state": "succeeded",
+          "attempts": 3,
+          "model": "glm-5.3-flash",
+          "effort": "high",
+          "sessionId": "60f46205-f441-4965-8da0-e67942470dfb",
+          "turnBudget": 20,
+          "deadlineMs": 600000
+        },
+        {
+          "jobId": "CDT-00002",
+          "state": "succeeded",
+          "attempts": 2,
+          "model": "glm-5.3-flash",
+          "effort": "high",
+          "sessionId": "ecb0c090-90c8-4f25-93f1-101706315e4f",
+          "turnBudget": 20,
+          "deadlineMs": 600000
+        },
+        {
+          "jobId": "CDT-00003",
+          "state": "succeeded",
+          "attempts": 4,
+          "model": "glm-5.3-flash",
+          "effort": "high",
+          "sessionId": "015f372e-ae26-4f80-a119-c92b5ac9a7da",
+          "turnBudget": 20,
+          "deadlineMs": 600000
+        },
+        {
+          "jobId": "CDT-00004",
+          "state": "succeeded",
+          "attempts": 3,
+          "model": "glm-5.3-flash",
+          "effort": "high",
+          "sessionId": "c6b7b22d-3f91-4d8b-b669-324067964860",
+          "turnBudget": 30,
+          "deadlineMs": 900000
+        }
+      ],
+      "wireRecords": 147,
+      "streamingMessageRecords": 146,
+      "allStreamingRecordsFlashHigh": true,
+      "legacyUnclassifiedRecords": 1,
+      "lastRecordsUseEndpointAndObservationStatus": true
+    },
+    "complexBackend": {
+      "path": ".artifacts/flash-high/backend-delivery",
+      "selftestsPassed": 23,
+      "seededReferenceSteps": 100,
+      "rootScenarios": 6,
+      "rootRepeatCount": 3,
+      "rootExitCodes": [
+        0,
+        0,
+        0
+      ],
+      "sourceSHA256": "56f4f4b7970db473f17b600c420042902de2e4dfb215df1d32f558a9c7956e62",
+      "sourceUnchangedDuringFinalChecks": true,
+      "bugsFixed": [
+        "Domain errors lost original code in transaction wrapper",
+        "WAL initialization under concurrent open could throw raw SQLITE_BUSY"
+      ],
+      "independentOracleCorrection": "Original overflow assertion required INVALID despite TASK permitting a meaningful domain CONFLICT; original red and script retained, v2 accepts either while all rollback/money assertions unchanged"
+    }
+  },
+  "securityAudit": {
+    "newCredentialMode": "0600",
+    "newCredentialValueNeverLogged": true,
+    "temporaryCredentialDuplicateRemoved": true,
+    "rawCredentialLeaks": [],
+    "scannedFiles": 3172,
+    "protectedUserConfigurationChanges": [],
+    "defaultCredentialFile": "~/.config/claude-durateam/credentials/volcengine.key",
+    "noGlobalMcpOrLoginChanges": true
+  },
+  "runtimeFileHashes": {
+    "package-lock.json": "3edbaebe0f12177900a6ed95ffff7f76bdf02a6a26c77bae240566c25a732c1d",
+    "package.json": "4ef0ad7dcc5420fc319d75f3fb6dc96c0770ae66e1e5f7c3b410a17c63b2276f",
+    "src/contracts.ts": "c6a3e389defa37ef268dfa088f8db91b692208e186ba80b6a65a5883b2874a88",
+    "src/engines/agent-runner.ts": "2d93240844b4f77bc9c63f58b3f000bad92c0382cfa975044bdb6977e015cd77",
+    "src/engines/auth-proxy.ts": "c4a25dcc24bdc4679b36508193de621645b55ed3fc9fe322ddaedb964f25b492",
+    "src/engines/environment.ts": "eb82c4bb5effb814e2d3f1889835783ef96d6095a39e2615a668140466dee8ba",
+    "src/engines/mcp-catalog.ts": "4774cdde111e601919bc26437163cde92234d347d4e3aa85ba85697e0c8950ad",
+    "src/engines/resource-catalog.ts": "f0a043ee500ef2f8e6105a387b52191d2cc71b9cc7139549ae55209b7c378656",
+    "src/engines/sdk-messages.ts": "a38484d107bf8db38226d125020bcf1f4726760f562f957b503a04dd8b0f7ca3",
+    "src/engines/session-store.ts": "aab095a7b03764ad6124a80f13f1572c811da943073b7ad929456cc751580f24",
+    "src/main.ts": "1953a4fc8e9eef70945f4a4513efdd8d5bc0227dca63aef4e1a62f39deb105b9",
+    "src/mcp/server.ts": "ab0f9277347203140e8f5b36628267cc0c38b27b855e6aa9fa847d8680234a09",
+    "src/mcp/tools.ts": "42d616676fb8744784c5d57f07831c2de6a9f8f030f0c167dfeb557ddf9ba295",
+    "src/observability/artifacts.ts": "e9964730fdd6c42f2229594bb5d3379c0f72b5cc580169229abde96122ebeb0e",
+    "src/observability/redact.ts": "893beb4b8abd9b3bdd835c3730606b4f2c23f15c1f7f4edd57829f84868c7ddc",
+    "src/scheduler/errors.ts": "39f36dd54528b0ab6b978a73844ee57801050354956702c796f4da3c8bc74bd4",
+    "src/scheduler/index.ts": "4dbe82584e2c363c210568de7de6b88e2561135518c207a6a4d0b0aad88c9b99",
+    "src/scheduler/job.ts": "4a343d3650fd51beb2bd6d94608ab70c9a90223cfec846ced3d226f2e63056df",
+    "src/scheduler/scheduler.ts": "9bbd6d5fe8893169556635f29dc994e58b3ad09900ab362418aebad0ef98be7b",
+    "src/scheduler/validation.ts": "6f8ae2859058c315d7b2695032f80fa1e0335cbfd8f30921ba87ce1a784bc218",
+    "src/scheduler/waits.ts": "fc75a3799253a70ffc833f3bb4b53bb2f15bd4a6e98b99ece62b571caa4add35",
+    "src/scripts/acceptance-env-probe.ts": "c211ec569faaebdeb0f5dfcc2084279bced8402bd21029b5bc08a598ae3436b0",
+    "src/scripts/acceptance-live-mcp.ts": "54e937ec265156b4d1ec36f456e4ed94be308eeefca803be2637305c63abe639",
+    "src/scripts/acceptance-mcp-fixture.ts": "258648dc0b7bfed8f0ac3023a0cbf0c138e145634de6354561829dad11f88e16",
+    "src/scripts/doctor.ts": "e7113243d893f3765350f8f6913d0929ce4b1bce5aef42fca43d9844286aeee9",
+    "src/scripts/live/live-transcript.ts": "4345771ef614dcdc3d084f2db5ee2a45ba73c1cddb70d5738139ec2dfed02ccd",
+    "src/scripts/live/probe-cli.ts": "82193b34cb1b02464ca2dd31e73013cc368ef0ba8e7ecf577667f48ef8cc312a",
+    "src/scripts/live/probe-cross-job-fork.ts": "729315b34fc02a25721bd57cdaaa71a036a9de22d891452f746e40461b0289e5",
+    "src/scripts/live/probe-edit-resume.ts": "f1c143ab854eb99a526e68442a12d4a9f727951726ac838bcc9861e135bba0c1",
+    "src/scripts/live/probe-negative.ts": "ad63957b10a5a2d50eb3a819294290e0e36e9d3f7754cb252563c38112b94edd",
+    "src/scripts/live/probe-sandbox-bash.ts": "12e2ac2e0c70e50733fee442ba45dacfb77dfc6d6f5384e69c3bc61b5dec942a",
+    "src/scripts/live/probe-sdk.ts": "313c29857ef0d36ba365a8982c848963d97ef487b5b74fbdc699df5676f6e58e",
+    "src/scripts/live/probe-skill-mcp-edit.ts": "a1bf22d59f2c309bdf6bc473032b92c86bf5e81fee4cb140471fc8d7482e4293",
+    "src/scripts/live/probe-steer.ts": "928c80b9055cc2027b1b41eafc6005dc6eb2a164f291f1234faffad5fb16a052",
+    "src/scripts/live/run-live.ts": "704de3a492a94095897f27545de17d4d057b8d1838cf27590b16ec300a0fb11d",
+    "src/scripts/mcp-handshake.ts": "b518877289cee416a805d615dff6f9da422cc329a80ebfa9c711318870ebfd62",
+    "src/state/index.ts": "90eebe715314389b70a005fb9d800ae4ac1be135a338e268c1da7e95b446f0db",
+    "src/state/sqlite.ts": "297e17e7980331625aae0a92e032e56425139a258f3428dfd19b8d76410f63ed",
+    "src/task-contracts.ts": "2e095f07d16599dae72f7f21bec34786d850960d88f7f5a1d07d6c6fab506eb5",
+    "src/task-limits.ts": "c08fdd04d61e6b4ba54386d6dfd47a609665a874ef18f6527804099fafd0874a",
+    "src/version.ts": "655e22dc8c7700c3c94395ceace836ad63f25dcfe66c6e28f23f6f7caf746383",
+    "src/workspace/exec.ts": "e66d5e5b3258b9a931af124b8cc06a1e5adbb73fdf491be2b3ab23535d75885b",
+    "src/workspace/gate.ts": "b6e199810d1c65fc7faf77c5909d19f4ca83762377199e52823ed7ed498869d7",
+    "src/workspace/git-workspace.ts": "d08c434630a8388e95c683e9550ca64e7099c715da2ad37851178c2b24764ff4",
+    "src/workspace/index.ts": "5cbeb2e92572fc020ee530f4e67ff99796060ce4defe1151bc1152caff9ce350",
+    "src/workspace/paths.ts": "e64eb25e53cd9c1979ab5a21d7c0f70a32061b988d640070a9072188a8b9c149",
+    "tsconfig.json": "eff4f62de229e9ec8970b28bfcc4e86023bc27e4fe0852d0aeda683758ba8431"
+  },
+  "commandEvidence": [
+    {
+      "file": ".artifacts/flash-high/checks/20261116T063158-cd3af733d52a.json",
+      "exitCode": 1,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T063158-cd3af733d52a.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T063328-f2784106fd23.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T063328-f2784106fd23.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T063458-3bcf135fb0d7.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T063458-3bcf135fb0d7.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T064404-4b1e96a16aa0.json",
+      "exitCode": 1,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T064404-4b1e96a16aa0.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T064639-da50f18d97bb.json",
+      "exitCode": 1,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T064639-da50f18d97bb.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T064909-368b744f7f95.json",
+      "exitCode": 1,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T064909-368b744f7f95.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065339-1ae601c804c7.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T065339-1ae601c804c7.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065508-88cb09973f30.json",
+      "exitCode": 1,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam/.artifacts/flash-high/ledger-root.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T065508-88cb09973f30.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065707-bbf722e8d758.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam/.artifacts/flash-high/ledger-root-v2.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T065707-bbf722e8d758.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065743-55fc4fc52828.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T065743-55fc4fc52828.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065835-d5c01c957679.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "dist/scripts/acceptance-live-mcp.js",
+        "--execute",
+        "--authorized-by",
+        "user-flash-high-hardening",
+        "--candidate-sha",
+        "7c002e2",
+        "--model",
+        "glm-5.3-flash",
+        "--effort",
+        "high"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T065835-d5c01c957679.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065903-b1a577cd6184.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+      "log": ".artifacts/flash-high/checks/20261116T065903-b1a577cd6184.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065923-99c53c8ec6d4.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+      "log": ".artifacts/flash-high/checks/20261116T065923-99c53c8ec6d4.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T065942-d129baed9d56.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+      "log": ".artifacts/flash-high/checks/20261116T065942-d129baed9d56.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T070108-d23642f49bc5.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "run",
+        "verify"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T070108-d23642f49bc5.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T070518-7b296eae11b4.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T070518-7b296eae11b4.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T070548-0481c7a63e90.json",
+      "exitCode": 1,
+      "command": [
+        "npx",
+        "vitest",
+        "run",
+        "test/flash-default-composition.test.ts"
+      ],
+      "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+      "log": ".artifacts/flash-high/checks/20261116T070548-0481c7a63e90.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T070727-d720e327a657.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T070727-d720e327a657.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T070747-6391b26d05a3.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "dist/scripts/acceptance-live-mcp.js",
+        "--execute",
+        "--authorized-by",
+        "user-flash-high-final",
+        "--candidate-sha",
+        "52a55f5",
+        "--model",
+        "glm-5.3-flash",
+        "--effort",
+        "high"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T070747-6391b26d05a3.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071008-cde9d2d1f24a.json",
+      "exitCode": 1,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071008-cde9d2d1f24a.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071147-ce9dd947f0a9.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071147-ce9dd947f0a9.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071342-c461f701d5af.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "dist/scripts/acceptance-live-mcp.js",
+        "--execute",
+        "--authorized-by",
+        "user-flash-high-final-budget",
+        "--candidate-sha",
+        "86d6b01",
+        "--model",
+        "glm-5.3-flash",
+        "--effort",
+        "high"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071342-c461f701d5af.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071344-c6ba4b0ca12f.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/absolute/path/claude-durateam/.artifacts/clean-install",
+      "log": ".artifacts/flash-high/checks/20261116T071344-c6ba4b0ca12f.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071413-3de7fd1d1f7b.json",
+      "exitCode": 1,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.concurrency.test.mjs",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.core.test.mjs",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.model.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9",
+      "log": ".artifacts/flash-high/checks/20261116T071413-3de7fd1d1f7b.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071753-35ed2111f216.json",
+      "exitCode": 0,
+      "command": [
+        "npm",
+        "run",
+        "verify"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071753-35ed2111f216.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071858-6f22c005d787.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.concurrency.test.mjs",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.core.test.mjs",
+        "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9/test/ledger.model.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam-flash-workers/wt-implement-task-md-as-a-real-auto-mwiwgrz0-081b1cd9",
+      "log": ".artifacts/flash-high/checks/20261116T071858-6f22c005d787.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071859-42922c129ffa.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam/.artifacts/flash-high/ledger-root-v2.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071859-42922c129ffa.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071859-4c5ee8a6aeb9.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam/.artifacts/flash-high/ledger-root-v2.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071859-4c5ee8a6aeb9.log"
+    },
+    {
+      "file": ".artifacts/flash-high/checks/20261116T071859-612a94dd460a.json",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "/absolute/path/claude-durateam/.artifacts/flash-high/ledger-root-v2.test.mjs"
+      ],
+      "cwd": "/absolute/path/claude-durateam",
+      "log": ".artifacts/flash-high/checks/20261116T071859-612a94dd460a.log"
+    }
+  ],
+  "historicalFailuresRetained": [
+    "First wave scope bug required controlled abort/resume",
+    "QA helper root and error-code assumptions",
+    "Unawaited async test assertion",
+    "Two600second stress-task timeouts, followed by same-session budget renewal",
+    "Ordinary regression failures are not intentional negative controls"
+  ],
+  "limits": [
+    "Bounded macOS Apple Silicon/Node26 validation, not exhaustive correctness or long-duration load proof",
+    "SDK transcript cross-cwd persistence still depends on pinned version internal layout",
+    "Early request observation had one unclassified nonstream record; no unsupported claim about its effort",
+    "No claim about exact HTTP call totals from SDK run counts or actual provider billing",
+    "Network access was denied for the local workload; local sandboxed Bash was explicitly approved"
+  ],
+  "requiredWorkRemaining": []
+}

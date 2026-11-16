@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.artifacts/
+.runtime/
+.env
+.env.*
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+
+# Local credentials, session transcripts and machine-specific settings.
+*.key
+*.pem
+*.p12
+*.pfx
+*.log
+*.jsonl
+coverage/
+/.claude/
+/credentials/
+/resource-catalog.json
+/mcp-catalog.json

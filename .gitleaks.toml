@@ -1,0 +1,18 @@
+title = "Claude-Durateam public-source secret scan"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "The redaction unit test uses a fixed, deliberately fake credential."
+condition = "AND"
+paths = ['''(?:^|/)test/redact\.test\.ts$''']
+regexTarget = "secret"
+regexes = ['''^ARK-SECRET-abcdef0123456789$''']
+
+[[allowlists]]
+description = "A validation manifest records the auth-proxy source SHA-256, not an API key."
+condition = "AND"
+paths = ['''(?:^|/)FLASH_HIGH_VALIDATION\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"src/engines/auth-proxy\.ts": "[a-f0-9]{64}",?\s*$''']

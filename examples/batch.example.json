@@ -1,0 +1,22 @@
+{
+  "tool": "spawn_batch",
+  "tasks": [
+    {
+      "prompt": "Inspect src/engines and report, without editing, which files own SDK event mapping and environment isolation.",
+      "cwd": "/Users/YOU/dev/your-repo",
+      "model": "glm-5.3",
+      "profile": "read",
+      "maxTurns": 3,
+      "deadlineMs": 120000
+    },
+    {
+      "prompt": "Add a small test for the path guard in test/agent-runner.test.ts and run npm test.",
+      "cwd": "/Users/YOU/dev/your-repo",
+      "model": "glm-5.3-flash",
+      "profile": "edit",
+      "maxTurns": 6,
+      "deadlineMs": 180000,
+      "allowedPaths": ["test/"]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "claude-durateam",
+  "version": "0.4.0",
+  "private": true,
+  "description": "MCP bridge that drives Claude Code Agent SDK workers against Volcengine Coding Plan (GLM-5.3)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "bin": {
+    "claude-durateam": "dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "doctor": "node dist/scripts/doctor.js",
+    "mcp:handshake": "node dist/scripts/mcp-handshake.js",
+    "test:live": "node dist/scripts/live/run-live.js",
+    "test:live:sdk": "node dist/scripts/live/probe-sdk.js",
+    "test:live:cli": "node dist/scripts/live/probe-cli.js",
+    "test:live:negative": "node dist/scripts/live/probe-negative.js",
+    "pretest": "npm run build",
+    "test:live:all": "npm run build && node dist/scripts/live/run-live.js",
+    "verify": "npm run typecheck && npm test && npm run mcp:handshake",
+    "test:live:edit": "node dist/scripts/live/probe-edit-resume.js",
+    "test:live:crossjob": "node dist/scripts/live/probe-cross-job-fork.js",
+    "test:live:steer": "node dist/scripts/live/probe-steer.js",
+    "test:live:sandbox": "node dist/scripts/live/probe-sandbox-bash.js",
+    "test:live:skill-mcp": "node dist/scripts/live/probe-skill-mcp-edit.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.325",
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  }
+}
